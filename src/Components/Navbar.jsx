@@ -10,14 +10,14 @@ const Navbar = () => {
     const [togglemode, settogglemode] = useState(false)
     return (
         <>
-        <div className='flex items-center justify-between w-full bg-primary fixed -z-10'>
+        <div className='flex items-center justify-between w-full bg-primary fixed z-10'>
             <ul className='flex items-center p-5 ml-4 text-secondary'>
                 <li> <img src={logo} alt="" srcSet=""  width={50}/></li>
                 <li>
                     Abhay | Web Dev
                 </li>
             </ul>
-            <ul className='md:flex space-x-7 p-5  text-secondary hidden'>
+            <ul className='md:flex space-x-7 p-5  text-secondary hidden font-extrabold'>
                 {navLinks.map((element)=>{
                     return (<li key={element.id}>
                         <Link to={element.id}>
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <li></li>
                 <li></li>
             </ul>
-                <ul className='text-secondary  md:hidden'>
+                <ul className='text-secondary  md:hidden ml-5'>
                   <Hamburger onToggle={()=>{
                     if(!togglemode){
                         settogglemode(true)
@@ -40,7 +40,7 @@ const Navbar = () => {
                     }  />
                 </ul>
         </div>
-        <div className={!togglemode?'hidden':''}>
+        <div className={!togglemode?'hidden':'relative top-16'}>
             <HamburgerList/>
         </div>
         </>
