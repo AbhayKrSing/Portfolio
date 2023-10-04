@@ -1,3 +1,3 @@
 import logo from './Logo.png'
-
-export { logo }
+const backgroundULR = "https://wallpaperaccess.com/full/3239480.jpg";
+export { logo, backgroundULR }

@@ -28,7 +28,7 @@ const Navbar = () => {
                 <li></li>
                 <li></li>
             </ul>
-                <ul className='text-secondary  md:hidden ml-5'>
+                <ul className='text-secondary  md:hidden mr-3'>
                   <Hamburger onToggle={()=>{
                     if(!togglemode){
                         settogglemode(true)
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </ul>
         </div>
         <div className={!togglemode?'hidden':'relative top-16'}>
-            <HamburgerList/>
+             <HamburgerList/>
         </div>
         </>
     )
