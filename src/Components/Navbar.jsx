@@ -1,13 +1,12 @@
-import React from 'react'
+import React,{Children} from 'react'
 import { logo } from '../assets'
 import {navLinks} from '../Constants'
 import { Link } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
 import HamburgerList from './HamburgerList'
-import { useState } from 'react'
-const Navbar = () => {
+const Navbar = ({children,togglemode,settogglemode}) => {
 
-    const [togglemode, settogglemode] = useState(false)
+ 
     return (
         <>
         <div className='flex items-center justify-between w-full bg-primary fixed z-10'>
@@ -43,6 +42,9 @@ const Navbar = () => {
         <div className={!togglemode?'hidden':'relative top-16'}>
              <HamburgerList/>
         </div>
+        {Children.map(children, child => {
+            return React.cloneElement(child, {togglemode: togglemode});
+        })}
         </>
     )
 }

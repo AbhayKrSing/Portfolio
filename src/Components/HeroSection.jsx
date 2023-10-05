@@ -1,10 +1,10 @@
 import React from 'react'
 import {blackgradient} from '../Style'
 
-const HeroSection = () => {
+const HeroSection = ({togglemode}) => {
   return (
-    <div className={`w-full min-h-[88.5vh] relative top-[75px] ${blackgradient} overflow-y-auto`}>
-         <div className='absolute text-white inset-40 flex'>
+    <div className={`w-full min-h-[100vh] ${togglemode?'absolute -z-10':"relative"} top-16 ${blackgradient} overflow-y-auto`}>
+         <div className='absolute text-white md:inset-32 inset-16 flex'>
             <ul className='flex-col'>
                 <li className='w-6 h-6 violet-gradient rounded-full'></li>
                 <li className='w-1 h-[40vh] violet-gradient mx-auto'></li>
