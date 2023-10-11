@@ -1,6 +1,5 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { blackgradient } from "../Style";
-import Computers from "./Computers";
 const HeroSection = ({ togglemode }) => {
   return (
     <>
@@ -22,10 +21,18 @@ const HeroSection = ({ togglemode }) => {
             <li className="text-3xl font-medium">
               I develop 3d visuals,user interfaces and web applications
             </li>
-            <div className="text-white relative inset-20">
-              <Suspense fallback={"loader"}>
-                <Computers></Computers>
-              </Suspense>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis asperiores aut dolor facere harum! Rerum aperiam magni
+              iste, eligendi vitae, ullam, nostrum eaque sunt tenetur quisquam
+              est! Et, consequatur voluptate? Quisquam, consequatur quo a libero
+              eaque, quis, laudantium minima dolore nihil delectus optio in
+              dolores neque perspiciatis ut aut. Voluptatum omnis cum harum
+              corporis, est ipsam delectus consequuntur distinctio ab ducimus
+              adipisci perferendis deleniti optio dolor nisi assumenda tempore
+              culpa, maiores aut atque eos. Beatae reiciendis illo consectetur!
+              Maxime perferendis quas repudiandae delectus nam ipsum fugit ut
+              eligendi maiores placeat nesciunt alias aspernatur blanditiis
             </div>
           </ul>
         </div>
