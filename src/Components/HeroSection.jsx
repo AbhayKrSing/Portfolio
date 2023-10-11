@@ -1,12 +1,13 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { blackgradient } from "../Style";
+import Computer from "./Computer";
 const HeroSection = ({ togglemode }) => {
   return (
     <>
       <div
         className={`w-full min-h-[100vh] ${
           togglemode ? "absolute -z-10" : "relative"
-        } top-16 ${blackgradient} overflow-y-auto`}
+        } top-16 ${blackgradient} overflow-hidden`}
       >
         <div className="absolute text-white md:inset-20 inset-16 flex">
           <ul className="flex-col">
@@ -21,18 +22,17 @@ const HeroSection = ({ togglemode }) => {
             <li className="text-3xl font-medium">
               I develop 3d visuals,user interfaces and web applications
             </li>
+            <li>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+              qui itaque ex eum ut pariatur libero dolor sed, temporibus, dolore
+              at delectus numquam modi nemo deserunt cupiditate dicta. Expedita,
+              illo? Praesentium accusantium aspernatur deserunt, ipsam error
+              obcaecati iste
+            </li>
             <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis asperiores aut dolor facere harum! Rerum aperiam magni
-              iste, eligendi vitae, ullam, nostrum eaque sunt tenetur quisquam
-              est! Et, consequatur voluptate? Quisquam, consequatur quo a libero
-              eaque, quis, laudantium minima dolore nihil delectus optio in
-              dolores neque perspiciatis ut aut. Voluptatum omnis cum harum
-              corporis, est ipsam delectus consequuntur distinctio ab ducimus
-              adipisci perferendis deleniti optio dolor nisi assumenda tempore
-              culpa, maiores aut atque eos. Beatae reiciendis illo consectetur!
-              Maxime perferendis quas repudiandae delectus nam ipsum fugit ut
-              eligendi maiores placeat nesciunt alias aspernatur blanditiis
+              <Suspense fallback={"loading"}>
+                <Computer></Computer>
+              </Suspense>
             </div>
           </ul>
         </div>
