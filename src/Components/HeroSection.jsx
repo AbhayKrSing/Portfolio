@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { blackgradient } from "../Style";
 import Computer from "./Computer";
 import { motion } from "framer-motion";
 
 const HeroSection = ({ togglemode }) => {
+  const [isMobile, setisMobile] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 500px)").matches) {
+      setisMobile(true);
+      console.log("matched");
+    } else {
+      console.log("not matched");
+    }
+  }, [isMobile]);
   return (
     <>
       <div
@@ -31,7 +40,7 @@ const HeroSection = ({ togglemode }) => {
               illo? Praesentium accusantium aspernatur deserunt, ipsam error
               obcaecati iste
             </li>
-            <Computer></Computer>
+            <Computer isMobile={isMobile}></Computer>
             <div className="flex justify-center">
               <a href="#about">
                 <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center">
