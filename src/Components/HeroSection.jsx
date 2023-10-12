@@ -1,13 +1,15 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { blackgradient } from "../Style";
 import Computer from "./Computer";
+import { motion } from "framer-motion";
+
 const HeroSection = ({ togglemode }) => {
   return (
     <>
       <div
-        className={`w-full min-h-[100vh] ${
+        className={`w-full min-h-[90vh] ${
           togglemode ? "absolute -z-10" : "relative"
-        } top-16 ${blackgradient} overflow-hidden`}
+        } top-16 ${blackgradient} overflow-y-scroll`}
       >
         <div className="absolute text-white md:inset-20 inset-16 flex">
           <ul className="flex-col">
@@ -29,10 +31,23 @@ const HeroSection = ({ togglemode }) => {
               illo? Praesentium accusantium aspernatur deserunt, ipsam error
               obcaecati iste
             </li>
-            <div>
-              <Suspense fallback={"loading"}>
-                <Computer></Computer>
-              </Suspense>
+            <Computer></Computer>
+            <div className="flex justify-center">
+              <a href="#about">
+                <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center">
+                  <motion.div
+                    animate={{
+                      y: [0, 35, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
+                    className="w-3 h-3 rounded full bg-secondary mb-1"
+                  />
+                </div>
+              </a>
             </div>
           </ul>
         </div>

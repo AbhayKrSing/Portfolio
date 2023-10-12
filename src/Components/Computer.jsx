@@ -4,6 +4,7 @@ import React, { useRef, Suspense } from "react";
 import { TextureLoader } from "three";
 import texture from "/CodingImage.png";
 import styled from "styled-components";
+import CanvasLoader from "./Loader";
 const Mesh = (props) => {
   const colormap = useLoader(TextureLoader, texture);
   const meshRef = useRef();
@@ -18,11 +19,11 @@ const Computer = () => {
   const Wrapper = styled.div`
     .canvas {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
       grid-gap: 1rem;
       place-items: start;
       position: relative;
-      right: 6rem;
+      right: 3rem;
       bottom: 3rem;
     }
   `;
@@ -31,12 +32,12 @@ const Computer = () => {
     <Wrapper>
       <Canvas
         className="canvas"
-        style={{ height: "500px", width: "min-content" }}
+        style={{ height: "400px", width: "min-content" }}
       >
         <OrbitControls enableZoom={false} />
         <ambientLight intensity={1} />
         <directionalLight position={[10, 10, 5]} intensity={2} />
-        <Suspense fallback={"loading"}>
+        <Suspense fallback={<CanvasLoader />}>
           <Mesh />
         </Suspense>
       </Canvas>
