@@ -8,9 +8,7 @@ const HeroSection = ({ togglemode }) => {
   useEffect(() => {
     if (window.matchMedia("(max-width: 500px)").matches) {
       setisMobile(true);
-      console.log("matched");
     } else {
-      console.log("not matched");
     }
   }, [isMobile]);
   return (
