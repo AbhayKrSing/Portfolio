@@ -48,7 +48,7 @@ const Computer = ({ isMobile }) => {
     <Wrapper>
       <Canvas
         className="canvas"
-        style={{ height: "60vh", width: "100%" }} //for mobile width=100%
+        style={{ height: isMobile ? "40vh" : "60vh", width: "100%" }} //for mobile width=100%
         frameloop="demand"
         shadows
         dpr={[1, 2]}

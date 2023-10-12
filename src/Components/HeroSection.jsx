@@ -6,11 +6,26 @@ import { motion } from "framer-motion";
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
   useEffect(() => {
-    if (window.matchMedia("(max-width: 500px)").matches) {
-      setisMobile(true);
-    } else {
+    // Create a match function
+    function handleMediaQueryChange(event) {
+      if (event.matches) {
+        setisMobile(true);
+        console.log("matched");
+      } else {
+        setisMobile(false);
+        console.log("notmatched");
+      }
     }
-  }, [isMobile]);
+
+    // // Create a MediaQueryList object
+    const MediaQuery = window.matchMedia("(max-width: 500px)");
+    // Add the match function as a listener for state changes:
+    MediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      MediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   return (
     <>
       <div
@@ -18,7 +33,7 @@ const HeroSection = ({ togglemode }) => {
           togglemode ? "absolute -z-10" : "relative"
         } top-16 ${blackgradient} overflow-y-scroll`}
       >
-        <div className="absolute text-white md:inset-20 inset-16 flex">
+        <div className="absolute text-white md:inset-20 inset-8 flex">
           <ul className="flex-col">
             <li className="w-6 h-6 violet-gradient rounded-full"></li>
             <li className="w-1 h-[40vh] violet-gradient mx-auto"></li>
@@ -38,7 +53,9 @@ const HeroSection = ({ togglemode }) => {
               illo? Praesentium accusantium aspernatur deserunt, ipsam error
               obcaecati iste
             </li>
-            <Computer isMobile={isMobile}></Computer>
+            <div>
+              <Computer isMobile={isMobile}></Computer>
+            </div>
             <div className="flex justify-center">
               <a href="#about">
                 <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center">
