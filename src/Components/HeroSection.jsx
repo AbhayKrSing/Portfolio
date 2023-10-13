@@ -76,7 +76,7 @@ const HeroSection = ({ togglemode }) => {
               </a>
             </div>
             <div>
-              <About />
+              <About isMobile={isMobile} />
             </div>
             <div>Text</div>
             <div>More</div>
