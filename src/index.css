@@ -13,6 +13,7 @@ ul {
     list-style-type: none;
 }
 
+/* voilet-gradient */
 .violet-gradient {
     background: #804dee;
     background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
