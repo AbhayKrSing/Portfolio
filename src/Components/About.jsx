@@ -39,7 +39,7 @@ const About = ({ isMobile }) => {
         {TechStack.map((element, index) => {
           return (
             <motion.div variants={childvariants} key={index}>
-              <Tilt element={element} isMobile={isMobile} key={index} />
+              <Tilt element={element} isMobile={isMobile} />
             </motion.div>
           );
         })}
