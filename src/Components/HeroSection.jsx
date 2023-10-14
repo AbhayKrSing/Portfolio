@@ -4,6 +4,7 @@ import Computer from "./Computer";
 import { motion } from "framer-motion";
 import About from "./About";
 import { ProvideValue } from "../Context/StateContext";
+import WorkExperience from "./WorkExperience";
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
   const { scrollToParticular_section } = ProvideValue();
@@ -81,8 +82,7 @@ const HeroSection = ({ togglemode }) => {
               </a>
             </div>
             <About isMobile={isMobile} />
-            <div>Text</div>
-            <div>More</div>
+            <WorkExperience />
             <div>More</div>
             <div>More</div>
             <div>More</div>
