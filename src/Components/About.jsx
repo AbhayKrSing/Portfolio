@@ -1,19 +1,23 @@
 import React, { useRef } from "react";
 import { aboutme } from "../Constants";
 import { motion, useInView } from "framer-motion";
-import { textvariants } from "../variants";
+import { childvariants, parentvariants, textvariants } from "../variants";
 import Tilt from "./Tilts";
 import { TechStack } from "../assets";
 import Hoc from "../HOC/Hoc";
 const About = ({ isMobile }) => {
-  const ref = useRef();
-  const InView = useInView(ref);
+  const Introref = useRef();
+  const IntroView = useInView(Introref);
+  const Techstackref = useRef();
+  // const Techstackview = useInView(Techstackref, { once: true }); //will return value only ones.
+  const Techstackview = useInView(Techstackref);
+
   return (
     <>
       <motion.div
-        ref={ref}
+        ref={Introref}
         variants={textvariants}
-        animate={InView ? "visible" : "hidden"}
+        animate={IntroView ? "visible" : "hidden"}
       >
         <h2 className="text-xl font-semibold">
           <span className="text-secondary font-light tracking-widest">
@@ -25,11 +29,21 @@ const About = ({ isMobile }) => {
         </h1>
         <p className="font-light tracking-widest">{aboutme}</p>
       </motion.div>
-      <div className="flex flex-wrap m-4">
+      <motion.div
+        className="flex flex-wrap m-4"
+        variants={parentvariants}
+        ref={Techstackref}
+        initial="hidden"
+        animate={Techstackview ? "visible" : "hidden"}
+      >
         {TechStack.map((element, index) => {
-          return <Tilt element={element} key={index} isMobile={isMobile} />;
+          return (
+            <motion.div variants={childvariants} key={index}>
+              <Tilt element={element} isMobile={isMobile} key={index} />
+            </motion.div>
+          );
         })}
-      </div>
+      </motion.div>
     </>
   );
 };

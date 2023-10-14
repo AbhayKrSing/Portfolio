@@ -1,3 +1,3 @@
-import { textvariants } from './variants'
+import { textvariants, parentvariants, childvariants } from './variants'
 
-export { textvariants }
+export { textvariants, parentvariants, childvariants }
