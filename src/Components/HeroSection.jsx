@@ -29,7 +29,7 @@ const HeroSection = ({ togglemode }) => {
   return (
     <>
       <div
-        className={`w-full min-h-[90vh] ${
+        className={`w-full min-h-[92vh] ${
           togglemode ? "absolute -z-10" : "relative"
         } top-16 ${blackgradient} overflow-y-scroll`}
       >
@@ -79,6 +79,8 @@ const HeroSection = ({ togglemode }) => {
               <About isMobile={isMobile} />
             </div>
             <div>Text</div>
+            <div>More</div>
+            <div>More</div>
             <div>More</div>
             <div>More</div>
           </ul>

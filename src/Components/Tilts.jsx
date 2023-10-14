@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Tilt } from "react-tilt";
-const Tilts = ({ isMobile }) => {
+const Tilts = ({ isMobile, element }) => {
   const defaultOptions = {
     reverse: false, // reverse the tilt direction
     max: 35, // max tilt rotation (degrees)
@@ -17,14 +17,20 @@ const Tilts = ({ isMobile }) => {
     <Tilt
       options={defaultOptions}
       style={{
+        display: "flex",
         height: 250,
         width: isMobile ? "90%" : 250,
         border: "1px solid white",
         borderRadius: "10%",
-        margin: "10px",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#003153",
+        margin: "5px",
       }}
     >
-      <div className="text-center">👽</div>
+      <div>
+        <img src={element} alt="img" srcSet="" width={200} height={200} />
+      </div>
     </Tilt>
   );
 };

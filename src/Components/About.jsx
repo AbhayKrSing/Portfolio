@@ -3,10 +3,10 @@ import { aboutme } from "../Constants";
 import { motion, useInView } from "framer-motion";
 import { textvariants } from "../variants";
 import Tilt from "./Tilts";
+import { TechStack } from "../assets";
 const About = ({ isMobile }) => {
   const ref = useRef();
   const InView = useInView(ref);
-  const samplearray = [1, 2, 3, 4, 5, 6]; //will remove after making original icons array
   return (
     <>
       <motion.div
@@ -24,8 +24,8 @@ const About = ({ isMobile }) => {
         </h1>
         <p className="font-light tracking-widest">{aboutme}</p>
       </motion.div>
-      <div className="flex flex-wrap">
-        {samplearray.map((element, index) => {
+      <div className="flex flex-wrap m-4">
+        {TechStack.map((element, index) => {
           return <Tilt element={element} key={index} isMobile={isMobile} />;
         })}
       </div>
