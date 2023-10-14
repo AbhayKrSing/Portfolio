@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { aboutme } from "../Constants";
 import { motion, useInView } from "framer-motion";
 import { textvariants } from "../variants";
 import Tilt from "./Tilts";
 import { TechStack } from "../assets";
+import Hoc from "../HOC/Hoc";
 const About = ({ isMobile }) => {
   const ref = useRef();
   const InView = useInView(ref);
@@ -33,4 +34,4 @@ const About = ({ isMobile }) => {
   );
 };
 
-export default About;
+export default Hoc(About, "about");

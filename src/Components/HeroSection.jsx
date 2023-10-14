@@ -3,8 +3,10 @@ import { blackgradient } from "../Style";
 import Computer from "./Computer";
 import { motion } from "framer-motion";
 import About from "./About";
+import { ProvideValue } from "../Context/StateContext";
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
+  const { scrollToParticular_section } = ProvideValue();
   useEffect(() => {
     // Create a match function
     function handleMediaQueryChange(event) {
@@ -70,14 +72,15 @@ const HeroSection = ({ togglemode }) => {
                       repeat: Infinity,
                       repeatType: "loop",
                     }}
+                    onClick={() => {
+                      scrollToParticular_section("about", "start");
+                    }}
                     className="w-3 h-3 rounded full bg-secondary mb-1"
                   />
                 </div>
               </a>
             </div>
-            <div>
-              <About isMobile={isMobile} />
-            </div>
+            <About isMobile={isMobile} />
             <div>Text</div>
             <div>More</div>
             <div>More</div>
