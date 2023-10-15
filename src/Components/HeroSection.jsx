@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import About from "./About";
 import { ProvideValue } from "../Context/StateContext";
 import WorkExperience from "./WorkExperience";
+import SphereModel from "./SphereModel";
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
   const { scrollToParticular_section } = ProvideValue();
@@ -83,7 +84,7 @@ const HeroSection = ({ togglemode }) => {
             </div>
             <About isMobile={isMobile} />
             <WorkExperience />
-            <div>More</div>
+            <SphereModel />
             <div>More</div>
             <div>More</div>
           </ul>
