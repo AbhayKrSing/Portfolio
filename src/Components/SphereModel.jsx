@@ -1,4 +1,4 @@
-import { RepeatWrapping } from "three";
+// import { RepeatWrapping } from "three";
 import React, { Suspense } from "react";
 import { Float, OrbitControls } from "@react-three/drei";
 import { Canvas, useLoader } from "@react-three/fiber";
@@ -35,7 +35,7 @@ function SphereModel({ image }) {
 export default function SphereShape() {
   return (
     <>
-      <h2 className="text-xl font-semibold">
+      <h2 className="text-xl font-semibold mt-10">
         <span className="text-secondary font-light tracking-widest">
           TechStacks
         </span>

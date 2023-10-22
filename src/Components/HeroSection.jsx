@@ -6,6 +6,8 @@ import About from "./About";
 import { ProvideValue } from "../Context/StateContext";
 import WorkExperience from "./WorkExperience";
 import SphereModel from "./SphereModel";
+import Project from "./Project";
+import { aboutme } from "../Constants";
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
   const { scrollToParticular_section } = ProvideValue();
@@ -50,13 +52,7 @@ const HeroSection = ({ togglemode }) => {
             <li className="text-3xl font-medium tracking-widest">
               I develop 3d visuals,user interfaces and web applications
             </li>
-            <li className="tracking-widest">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
-              qui itaque ex eum ut pariatur libero dolor sed, temporibus, dolore
-              at delectus numquam modi nemo deserunt cupiditate dicta. Expedita,
-              illo? Praesentium accusantium aspernatur deserunt, ipsam error
-              obcaecati iste
-            </li>
+            <li className="tracking-widest">{aboutme}</li>
             <div>
               <Computer isMobile={isMobile}></Computer>
             </div>
@@ -85,8 +81,8 @@ const HeroSection = ({ togglemode }) => {
             <About isMobile={isMobile} />
             <WorkExperience />
             <SphereModel />
-            <div>More</div>
-            <div>More</div>
+            <Project />
+            <div className="h-[40px]"></div>
           </ul>
         </div>
       </div>
