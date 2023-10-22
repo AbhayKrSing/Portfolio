@@ -81,8 +81,10 @@ const HeroSection = ({ togglemode }) => {
             <About isMobile={isMobile} />
             <WorkExperience />
             <SphereModel />
-            <Project />
-            <div className="h-[40px]"></div>
+            <Project isMobile={isMobile} />
+            <div>more</div>
+            <div>more</div>
+            <div>more</div>
           </ul>
         </div>
       </div>

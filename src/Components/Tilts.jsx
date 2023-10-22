@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Tilt } from "react-tilt";
-const Tilts = ({ isMobile, element }) => {
+import { GithubLogo } from "../assets";
+
+const Tilts = ({ isMobile, element, identifier }) => {
   const defaultOptions = {
     reverse: false, // reverse the tilt direction
     max: 35, // max tilt rotation (degrees)
@@ -18,18 +20,36 @@ const Tilts = ({ isMobile, element }) => {
       options={defaultOptions}
       style={{
         display: "flex",
-        height: 250,
-        width: isMobile ? "90%" : 250,
+        height: identifier === "projects" ? 350 : 250,
+        width: isMobile ? "90%" : identifier === "projects" ? 350 : 250,
         border: "1px solid white",
         borderRadius: "10%",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: identifier === "about" ? "center" : "",
         backgroundColor: "#003153",
         margin: "5px",
       }}
     >
       <div>
-        <img src={element} alt="img" srcSet="" width={200} height={200} />
+        {identifier === "projects" ? (
+          <div className="relative">
+            <div className="absolute right-1">
+              <a href={element.url}>
+                <img src={GithubLogo} alt="" srcset="" width={40} />
+              </a>
+            </div>
+            <img
+              src={element.img}
+              alt="img"
+              srcSet=""
+              style={{ borderRadius: "13% 13% 0 0" }}
+              className="block"
+            />
+            <p className="m-3">{element.about}</p>
+          </div>
+        ) : (
+          <img src={element} alt="img" srcSet="" width={200} height={200} />
+        )}
       </div>
     </Tilt>
   );
