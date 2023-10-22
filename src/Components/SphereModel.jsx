@@ -1,6 +1,6 @@
 import { RepeatWrapping } from "three";
 import React, { Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
+import { Float, OrbitControls } from "@react-three/drei";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import { TechStack } from "../assets";
@@ -10,16 +10,18 @@ function AnimatedSphere({ image }) {
   // colormap.wrapS = colormap.wrapT = RepeatWrapping;
   // colormap.repeat.set(1, 1); // Adjust these values to change the texture size
   return (
-    <mesh rotation={[90, 0, 20]} scale={1.2}>
-      <boxGeometry args={[3, 3, 3]} />
-      <meshStandardMaterial map={colormap} />
-    </mesh>
+    <Float>
+      <mesh rotation={[90, 0, 20]} scale={1.2}>
+        <boxGeometry args={[3, 3, 3]} />
+        <meshStandardMaterial map={colormap} />
+      </mesh>
+    </Float>
   );
 }
 
 function SphereModel({ image }) {
   return (
-    <Canvas className="canvas" style={{ height: "25vh", width: "140px" }}>
+    <Canvas className="canvas" style={{ height: "25vh", width: "160px" }}>
       <OrbitControls enableZoom={false} />
       <Suspense fallback={"loading"}>
         <ambientLight intensity={3} />
