@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Projectdetails } from "../Constants";
 import { motion, useInView } from "framer-motion";
-import { childvariants, parentvariants, textvariants } from "../variants";
+import { parentvariants, textvariants } from "../variants";
 import Tilt from "./Tilts";
 import { ProjectsPhoto } from "../assets";
 import { project_childvariants } from "../variants/variants";
@@ -18,6 +18,7 @@ const Project = ({ isMobile }) => {
         ref={Introref}
         variants={textvariants}
         animate={IntroView ? "visible" : "hidden"}
+        className="mt-10"
       >
         <h2 className="text-xl font-semibold">
           <span className="text-secondary font-light tracking-widest">

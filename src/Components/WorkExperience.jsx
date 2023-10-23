@@ -28,8 +28,8 @@ const WorkExperience = () => {
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+          contentStyle={{ background: "#003153", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #003153" }}
           date="2011 - present"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={
@@ -48,8 +48,8 @@ const WorkExperience = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+          contentStyle={{ background: "#003153", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #003153" }}
           date="2012 - present"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={
