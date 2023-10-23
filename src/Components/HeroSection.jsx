@@ -9,6 +9,8 @@ import SphereModel from "./SphereModel";
 import Project from "./Project";
 import { aboutme } from "../Constants";
 import Feedback from "./Feedback";
+import Contact from "./Contact";
+
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
   const { scrollToParticular_section } = ProvideValue();
@@ -84,7 +86,7 @@ const HeroSection = ({ togglemode }) => {
             <SphereModel />
             <Project isMobile={isMobile} />
             <Feedback isMobile={isMobile} />
-            <div>more</div>
+            <Contact isMobile={isMobile} />
             <div>more</div>
             <div className="h-[40px]"></div>
           </ul>

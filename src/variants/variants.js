@@ -40,3 +40,20 @@ export const project_childvariants = {
         },
     }
 }
+
+export function slideIn(direction) {
+    const variants = {
+        hidden: {
+            opacity: 0,
+            x: direction === 'left' ? -100 : 100,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.2
+            },
+        }
+    }
+    return variants;
+}

@@ -16,7 +16,7 @@ const Navbar = ({ children, togglemode, settogglemode }) => {
             {" "}
             <img src={logo} alt="" srcSet="" width={50} />
           </li>
-          <li>Abhay | Web Dev</li>
+          <li className="font-bold">Abhay | Web Dev</li>
         </ul>
         <ul className="md:flex space-x-7 p-5  text-secondary hidden font-extrabold">
           {navLinks.map((element) => {

@@ -23,7 +23,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
         height: identifier === "projects" ? 350 : 250,
         width: isMobile ? "90%" : identifier === "projects" ? 350 : 250,
         border: "1px solid white",
-        borderRadius: "10%",
+        borderRadius: "3%",
         justifyContent: "center",
         alignItems: identifier === "about" ? "center" : "",
         backgroundColor: "#003153",
@@ -42,7 +42,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
               src={element.img}
               alt="img"
               srcSet=""
-              style={{ borderRadius: "13% 13% 0 0" }}
+              style={{ borderRadius: "3% 3% 0 0" }}
               className="block"
             />
             <p className="m-3">{element.about}</p>
