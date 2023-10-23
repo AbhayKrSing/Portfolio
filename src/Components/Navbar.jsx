@@ -51,7 +51,7 @@ const Navbar = ({ children, togglemode, settogglemode }) => {
         <HamburgerList />
       </div>
       {Children.map(children, (child) => {
-        return React.cloneElement(child, { togglemode: togglemode });
+        return React.cloneElement(child, { togglemode: togglemode }); //sending props to children
       })}
     </>
   );

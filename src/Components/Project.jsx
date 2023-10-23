@@ -5,6 +5,7 @@ import { parentvariants, textvariants } from "../variants";
 import Tilt from "./Tilts";
 import { ProjectsPhoto } from "../assets";
 import { project_childvariants } from "../variants/variants";
+import Hoc from "../HOC/Hoc";
 const Project = ({ isMobile }) => {
   const Introref = useRef();
   const IntroView = useInView(Introref);
@@ -53,4 +54,4 @@ const Project = ({ isMobile }) => {
   );
 };
 
-export default Project;
+export default Hoc(Project, "work");
