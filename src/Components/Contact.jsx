@@ -58,7 +58,10 @@ const Contact = ({ isMobile }) => {
                 placeholder="Whats Your message"
               />
             </div>
-            <button type="submit" className="bg-blue-950 py-3 px-10 rounded-lg">
+            <button
+              type="submit"
+              className="bg-blue-950 py-3 px-10 rounded-lg font-bold"
+            >
               Send
             </button>
           </form>
