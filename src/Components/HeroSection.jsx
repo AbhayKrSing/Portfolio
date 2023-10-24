@@ -91,8 +91,6 @@ const HeroSection = ({ togglemode }) => {
               <Earth />
               <Stars />
             </div>
-            <div>more</div>
-            <div className="h-[40px]"></div>
           </ul>
         </div>
       </div>
