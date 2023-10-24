@@ -11,6 +11,8 @@ import { aboutme } from "../Constants";
 import Feedback from "./Feedback";
 import Contact from "./Contact";
 import Earth from "./Earth";
+import Stars from "./Stars";
+
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
   const { scrollToParticular_section } = ProvideValue();
@@ -84,9 +86,10 @@ const HeroSection = ({ togglemode }) => {
             <SphereModel />
             <Project isMobile={isMobile} />
             <Feedback isMobile={isMobile} />
-            <div className="flex items-center flex-wrap-reverse xl:justify-between justify-center">
+            <div className="flex items-center flex-wrap-reverse xl:justify-between justify-center relative z-0">
               <Contact />
               <Earth />
+              <Stars />
             </div>
             <div>more</div>
             <div className="h-[40px]"></div>
