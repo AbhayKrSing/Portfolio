@@ -37,9 +37,11 @@ const Contact = ({ isMobile }) => {
         senderMessage: "",
       });
       console.log("SUCCESS!", res.status, res.text);
+      alert("Email send successfully,I will get back to you soon.");
     } catch (error) {
       console.log(error);
       setloading(false);
+      alert("Something went wrong can 't send email.Try again later");
     }
   };
   return (
