@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { textvariants } from "../variants";
 import emailjs from "@emailjs/browser";
+import Hoc from "../HOC/Hoc";
 //service_wqwkl2a  -->Service ID
 const Contact = ({ isMobile }) => {
   const Introref = useRef();
@@ -120,4 +121,4 @@ const Contact = ({ isMobile }) => {
   );
 };
 
-export default Contact;
+export default Hoc(Contact, "contact");
