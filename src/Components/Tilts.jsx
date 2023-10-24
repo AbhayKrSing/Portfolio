@@ -35,7 +35,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
           <div className="relative">
             <div className="absolute right-1">
               <a href={element.url}>
-                <img src={GithubLogo} alt="" srcset="" width={40} />
+                <img src={GithubLogo} alt="" srcSet="" width={40} />
               </a>
             </div>
             <img

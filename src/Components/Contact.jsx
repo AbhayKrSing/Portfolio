@@ -12,7 +12,9 @@ const Contact = ({ isMobile }) => {
         ref={Introref}
         variants={textvariants}
         animate={IntroView ? "visible" : "hidden"}
-        className="flex justify-center py-20 mt-20 rounded-lg"
+        className={`flex justify-center xl:py-20 xl:mt-20 rounded-lg ${
+          isMobile ? "" : "xl:w-[43rem] w-[100%]"
+        }`} //40rem hatana hai phone pe
       >
         <div
           className="w-[100%] p-20 rounded-lg"

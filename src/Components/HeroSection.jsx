@@ -10,7 +10,7 @@ import Project from "./Project";
 import { aboutme } from "../Constants";
 import Feedback from "./Feedback";
 import Contact from "./Contact";
-
+import Earth from "./Earth";
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
   const { scrollToParticular_section } = ProvideValue();
@@ -18,11 +18,9 @@ const HeroSection = ({ togglemode }) => {
     // Create a match function
     function handleMediaQueryChange(event) {
       if (event.matches) {
-        setisMobile(true);
-        console.log("matched");
+        setisMobile(true); //matched
       } else {
-        setisMobile(false);
-        console.log("notmatched");
+        setisMobile(false); //unmatched
       }
     }
 
@@ -86,7 +84,10 @@ const HeroSection = ({ togglemode }) => {
             <SphereModel />
             <Project isMobile={isMobile} />
             <Feedback isMobile={isMobile} />
-            <Contact isMobile={isMobile} />
+            <div className="flex items-center flex-wrap-reverse xl:justify-between justify-center">
+              <Contact />
+              <Earth />
+            </div>
             <div>more</div>
             <div className="h-[40px]"></div>
           </ul>
