@@ -20,7 +20,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
       options={defaultOptions}
       style={{
         display: "flex",
-        height: identifier === "projects" ? 350 : 250,
+        height: identifier === "projects" ? "100%" : 250,
         width: isMobile ? "90%" : identifier === "projects" ? 350 : 250,
         border: "1px solid white",
         borderRadius: "3%",
