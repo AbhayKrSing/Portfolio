@@ -32,7 +32,7 @@ const Project = ({ isMobile }) => {
         <p className="font-light tracking-widest">{Projectdetails}</p>
       </motion.div>
       <motion.div
-        className="flex flex-wrap m-4"
+        className="flex flex-wrap"
         variants={parentvariants}
         ref={Techstackref}
         initial="hidden"

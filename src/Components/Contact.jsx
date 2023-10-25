@@ -66,7 +66,7 @@ const Contact = ({ isMobile }) => {
               GET IN TOUCH
             </span>
           </h2>
-          <h1 className="text-6xl font-black my-6">
+          <h1 className="text-5xl sm:text-6xl font-black my-6">
             <span className="text-secondary">Contacts.</span>
           </h1>
           <div className="flex space-x-10 flex-wrap">

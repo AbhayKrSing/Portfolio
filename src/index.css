@@ -25,3 +25,8 @@ ul {
             #804dee 0%,
             rgba(60, 51, 80, 0) 100%);
 }
+
+.response {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+}
