@@ -4,7 +4,7 @@ const Hoc = (Component, id) => {
   return function hoc() {
     return (
       <>
-        <div id={id}>
+        <div id={id} className="w-full xl:w-auto">
           <Component />
         </div>
       </>

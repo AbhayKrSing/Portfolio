@@ -52,7 +52,7 @@ const Contact = ({ isMobile }) => {
         variants={textvariants}
         animate={IntroView ? "visible" : "hidden"}
         className={`flex justify-center xl:py-20 xl:mt-20 rounded-lg ${
-          isMobile ? "" : "xl:w-[43rem] w-[100%]"
+          isMobile ? "" : "xl:w-[40rem] w-[100%]"
         }`} //40rem hatana hai phone pe
       >
         <div

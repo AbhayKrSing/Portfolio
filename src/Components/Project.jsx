@@ -40,7 +40,11 @@ const Project = ({ isMobile }) => {
       >
         {ProjectsPhoto.map((element, index) => {
           return (
-            <motion.div variants={project_childvariants} key={index}>
+            <motion.div
+              variants={project_childvariants}
+              key={index}
+              className="mt-5"
+            >
               <Tilt
                 element={element}
                 isMobile={isMobile}
