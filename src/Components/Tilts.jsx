@@ -21,7 +21,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
       style={{
         display: "flex",
         height: identifier === "projects" ? "100%" : 250,
-        width: isMobile ? "90%" : identifier === "projects" ? 330 : 250, //phele 350 tha.
+        width: isMobile ? "90%" : identifier === "projects" ? 340 : 250, //phele 350 tha.
         border: "1px solid white",
         borderRadius: "3%",
         justifyContent: "center",
