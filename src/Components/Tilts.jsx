@@ -1,6 +1,6 @@
 import React from "react";
 import { Tilt } from "react-tilt";
-import { GithubLogo } from "../assets";
+import { GithubLogo, DeployLogo } from "../assets";
 
 const Tilts = ({ isMobile, element, identifier }) => {
   const defaultOptions = {
@@ -33,10 +33,29 @@ const Tilts = ({ isMobile, element, identifier }) => {
       <div>
         {identifier === "projects" ? (
           <div className="relative">
+            {/* For github */}
             <div className="absolute right-1">
-              <a href={element.url}>
-                <img src={GithubLogo} alt="" srcSet="" width={40} />
+              <a href={element.url} target="_blank">
+                <img
+                  src={GithubLogo}
+                  alt="imgloading..."
+                  srcSet=""
+                  width={40}
+                />
               </a>
+            </div>
+            {/* For Link */}
+            <div className="absolute right-12">
+              {element.deploy && (
+                <a href={element.deploy} target="_blank">
+                  <img
+                    src={DeployLogo}
+                    alt="imgloading..."
+                    srcSet=""
+                    width={50}
+                  />
+                </a>
+              )}
             </div>
             <img
               src={element.img}
@@ -45,6 +64,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
               style={{ borderRadius: "3% 3% 0 0" }}
               className="block"
             />
+            <p className="text-center font-bold">{element.name}</p>
             <p className="m-3">{element.about}</p>
           </div>
         ) : (

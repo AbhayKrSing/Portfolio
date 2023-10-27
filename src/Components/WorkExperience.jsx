@@ -6,7 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { textvariants } from "../variants";
-const WorkExperience = () => {
+const WorkExperience = ({ element }) => {
   const Introref = useRef();
   const IntroView = useInView(Introref);
   return (
@@ -30,40 +30,22 @@ const WorkExperience = () => {
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#003153", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  #003153" }}
-          date="2011 - present"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={
-            <img
-              src="https://th.bing.com/th/id/OIP.d2_YJpQXd074spMEeB5SdwHaGb?w=205&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
-              className="rounded-full"
-            />
-          }
+          date={element.date}
+          iconStyle={{ background: "#006dba", color: "#fff" }}
+          icon={<img src={element.image} className="rounded-full h-full" />}
         >
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+          <h3 className="vertical-timeline-element-title">{element.role}</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            {element.place}
+          </h4>
           <p>
-            Creative Direction, User Experience, Visual Design, Project
-            Management, Team Leading
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "#003153", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #003153" }}
-          date="2012 - present"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={
-            <img
-              src="https://th.bing.com/th/id/OIP.d2_YJpQXd074spMEeB5SdwHaGb?w=205&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
-              className="rounded-full"
-            />
-          }
-        >
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, Project
-            Management, Team Leading
+            {element.service}
+            <p>
+              Link:
+              <a href={element.link} className="font-bold" target="_blank">
+                Take me to a {element.name} site
+              </a>
+            </p>
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>

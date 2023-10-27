@@ -12,6 +12,7 @@ import Feedback from "./Feedback";
 import Contact from "./Contact";
 import Earth from "./Earth";
 import Stars from "./Stars";
+import { work_experience } from "../assets";
 
 const HeroSection = ({ togglemode }) => {
   const [isMobile, setisMobile] = useState(false);
@@ -83,7 +84,9 @@ const HeroSection = ({ togglemode }) => {
                 </a>
               </div>
               <About isMobile={isMobile} />
-              <WorkExperience />
+              {work_experience.map((element) => {
+                return <WorkExperience element={element} />;
+              })}
               <SphereModel />
               <Project isMobile={isMobile} />
               <Feedback isMobile={isMobile} />
