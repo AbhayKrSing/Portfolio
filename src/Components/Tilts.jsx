@@ -21,7 +21,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
       style={{
         display: "flex",
         height: identifier === "projects" ? "100%" : 250,
-        width: isMobile ? "90%" : identifier === "projects" ? 340 : 250, //phele 350 tha.
+        width: isMobile ? "90%" : identifier === "projects" ? 340 : 270, //phele 350 tha.
         border: "1px solid white",
         borderRadius: "3%",
         justifyContent: "center",
@@ -68,7 +68,7 @@ const Tilts = ({ isMobile, element, identifier }) => {
             <p className="m-3">{element.about}</p>
           </div>
         ) : (
-          <img src={element} alt="img" srcSet="" width={200} height={200} />
+          <img src={element} alt="img" srcSet="" width={160} />
         )}
       </div>
     </Tilt>

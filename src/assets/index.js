@@ -10,7 +10,22 @@ import Dashboard from './Projects/Dashboard.png'
 import GithubLogo from './GitHub_logo.png'
 import wixLogo from './WorkExp/Wixlogo.png'
 import DeployLogo from './Deploy_logo.png'
+import androiddev_logo from './Skills/AndroidDev_logo.png'
+import backenddev_logo from './Skills/backendDevLogo.png'
+import designer_logo from './Skills/Designer_logo.png'
+import frontenddev_logo from './Skills/FrontendDev_logo.png'
+import webdev_logo from './Skills/webDev_logo.png'
+import wixdev_logo from './Skills/WixDev_logo.png'
+import wordpressdev_logo from './Skills/Wordpress_logo.png'
+
+
+
+
+
+
+
 const TechStack = [react, nodejs, Express, Mongo, NextJs]
+const Skills = [webdev_logo, frontenddev_logo, designer_logo, backenddev_logo, wordpressdev_logo, wixdev_logo, androiddev_logo];
 const ProjectsPhoto = [{
     name: "Artifacts",
     img: Artifacts,
@@ -41,4 +56,4 @@ const work_experience = [{
     image: wixLogo
 }]
 
-export { logo, TechStack, ProjectsPhoto, GithubLogo, work_experience, DeployLogo }
+export { logo, TechStack, ProjectsPhoto, GithubLogo, work_experience, DeployLogo, Skills }

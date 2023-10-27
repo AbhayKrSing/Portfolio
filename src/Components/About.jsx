@@ -3,7 +3,7 @@ import { aboutme } from "../Constants";
 import { motion, useInView } from "framer-motion";
 import { childvariants, parentvariants, textvariants } from "../variants";
 import Tilt from "./Tilts";
-import { TechStack } from "../assets";
+import { Skills } from "../assets";
 import Hoc from "../HOC/Hoc";
 const About = ({ isMobile }) => {
   const Introref = useRef();
@@ -36,7 +36,7 @@ const About = ({ isMobile }) => {
         initial="hidden"
         animate={Techstackview ? "visible" : "hidden"}
       >
-        {TechStack.map((element, index) => {
+        {Skills.map((element, index) => {
           return (
             <motion.div variants={childvariants} key={index}>
               <Tilt
