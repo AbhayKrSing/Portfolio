@@ -68,7 +68,10 @@ const Tilts = ({ isMobile, element, identifier }) => {
             <p className="m-3">{element.about}</p>
           </div>
         ) : (
-          <img src={element} alt="img" srcSet="" width={160} />
+          <>
+            <img src={element.logo} alt="img" srcSet="" width={150} />
+            <p className="font-bold text-center">{element.name}</p>
+          </>
         )}
       </div>
     </Tilt>

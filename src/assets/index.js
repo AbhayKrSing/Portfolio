@@ -1,15 +1,28 @@
-import logo from './Logo.png'
+import logo from './Logo.png' //Icon of Web
+//Techstack
 import react from './TechStack/React.png'
 import nodejs from './TechStack/Nodejs.png'
 import Express from './TechStack/Express.png'
 import Mongo from './TechStack/Mongodb.png'
 import NextJs from './TechStack/NextJs.png'
+import redux from './TechStack/redux.png';
+import git from './TechStack/git.png'
+import css from './TechStack/css.png'
+import docker from './TechStack/docker.png'
+import html from './TechStack/html.png'
+import js from './TechStack/javascript.png'
+import tailwind from './TechStack/tailwind.png'
+
+//project
 import Artifacts from './Projects/Artifacts.jpg'
 import ChatApp from './Projects/ChatApp.png'
 import Dashboard from './Projects/Dashboard.png'
+//github and deploy logo
 import GithubLogo from './GitHub_logo.png'
-import wixLogo from './WorkExp/Wixlogo.png'
 import DeployLogo from './Deploy_logo.png'
+
+//Skills
+import wixLogo from './WorkExp/Wixlogo.png'
 import androiddev_logo from './Skills/AndroidDev_logo.png'
 import backenddev_logo from './Skills/backendDevLogo.png'
 import designer_logo from './Skills/Designer_logo.png'
@@ -24,8 +37,35 @@ import wordpressdev_logo from './Skills/Wordpress_logo.png'
 
 
 
-const TechStack = [react, nodejs, Express, Mongo, NextJs]
-const Skills = [webdev_logo, frontenddev_logo, designer_logo, backenddev_logo, wordpressdev_logo, wixdev_logo, androiddev_logo];
+const TechStack = [react, nodejs, Express, Mongo, NextJs, redux, git, css, docker, html, js, tailwind
+]
+const Skills = [{
+    name: 'Web Dev',
+    logo: webdev_logo
+},
+{
+    name: 'Frontend Dev', logo: frontenddev_logo
+},
+{
+    name: 'Design',
+    logo: designer_logo
+},
+{
+    name: 'Backend Dev',
+    logo: backenddev_logo
+},
+{
+    name: 'Wordpress',
+    logo: wordpressdev_logo
+},
+{
+    name: 'Wix',
+    logo: wixdev_logo
+}
+    , {
+    name: 'Android Dev',
+    logo: androiddev_logo
+}];
 const ProjectsPhoto = [{
     name: "Artifacts",
     img: Artifacts,
