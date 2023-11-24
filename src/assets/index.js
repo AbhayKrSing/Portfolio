@@ -22,7 +22,7 @@ import GithubLogo from './GitHub_logo.png'
 import DeployLogo from './Deploy_logo.png'
 
 //Skills
-import wixLogo from './WorkExp/Wixlogo.png'
+import wixLogo from './WorkExp/WixLogo.png'
 import androiddev_logo from './Skills/AndroidDev_logo.png'
 import backenddev_logo from './Skills/backendDevLogo.png'
 import designer_logo from './Skills/Designer_logo.png'
