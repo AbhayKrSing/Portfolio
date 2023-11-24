@@ -4,7 +4,7 @@ import react from './TechStack/React.png'
 import nodejs from './TechStack/Nodejs.png'
 import Express from './TechStack/Express.png'
 import Mongo from './TechStack/Mongodb.png'
-import NextJs from './TechStack/NextJs.png'
+import NextJs from './TechStack/NextJS.png'
 import redux from './TechStack/redux.png';
 import git from './TechStack/git.png'
 import css from './TechStack/css.png'
