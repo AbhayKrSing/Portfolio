@@ -45,8 +45,8 @@ const HeroSection = ({ togglemode }) => {
       >
         <div className="absolute text-white md:inset-16 md:mt-0 mt-12 flex">
           <ul className="flex-col">
-            <li className="w-6 h-6 violet-gradient rounded-full"></li>
-            <li className="w-1 h-[40vh] violet-gradient mx-auto"></li>
+            <li className="sm:w-6 sm:h-6 h-2 w-2 sm:violet-gradient rounded-full "></li>
+            <li className="w-1 h-[40vh] violet-gradient mx-auto sm:block hidden"></li>
           </ul>
           <ul className="grid response">
             <div>
