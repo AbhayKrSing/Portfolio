@@ -55,14 +55,12 @@ const HeroSection = ({ togglemode }) => {
               </li>
               <br />
               <li className="text-3xl font-medium ">
-                I develop 3d visuals,user interfaces and web applications
+                I m MERN Stack Developer
               </li>
-              <li className="">{aboutme}</li>
               <div>
                 <Computer isMobile={isMobile}></Computer>
               </div>
               <div className="flex justify-center relative bottom-10">
-                {" "}
                 {/*scrolling to about*/}
                 <a href="#about">
                   <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center">
@@ -84,9 +82,7 @@ const HeroSection = ({ togglemode }) => {
                 </a>
               </div>
               <About isMobile={isMobile} />
-              {work_experience.map((element) => {
-                return <WorkExperience element={element} />;
-              })}
+              <WorkExperience />
               <SphereModel />
               <Project isMobile={isMobile} />
               <Feedback isMobile={isMobile} />

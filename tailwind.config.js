@@ -7,9 +7,6 @@ export default {
         primary: '#001524',
         secondary: '#EEEEEE'
       },
-      fontFamily: {
-        sans: ['Work Sans', 'Yeseva One']
-      },
     },
   },
   plugins: [],

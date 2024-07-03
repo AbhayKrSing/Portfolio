@@ -16,7 +16,7 @@ export const navLinks = [
     },
 ];
 
-export const aboutme = "I'm an experienced MERN stack developer with a strong background in Next.js. I've successfully developed applications like ChatApp, Modern Newsapp, Note App, and Hacktransverse. In addition to my MERN stack expertise, I'm well-versed in backend technologies such as Appwrite and Firebase. With a proven track record and a wide range of skills, I'm ready to assist you in bringing your project to life. Whether you need a MERN-based application, Next.js integration, or backend development using Appwrite or Firebase, I've got you covered."
+export const aboutme = "I'm an experienced MERN stack developer with a strong background in Next.js. I've successfully developed applications like ChatApp, Modern Newsapp, Note App, and UPDF. In addition to my MERN stack expertise, I'm well-versed in backend technologies like NodeJS. With a proven track record and a wide range of skills, I'm ready to assist you in bringing your project to life. Whether you need a MERN-based application, Next.js integration, or backend development. I've got you covered."
 
 export const Projectdetails = "Following Projects showcase my skills and experience through through real work examples of my work.Each Project is briefly describe with link to code respositories and live demos in it.It reflects my ability to solve problems,work with different technologies, and manage projects effectively."
 

@@ -6,7 +6,8 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { textvariants } from "../variants";
-const WorkExperience = ({ element }) => {
+import { work_experience } from "../assets";
+const WorkExperience = () => {
   const Introref = useRef();
   const IntroView = useInView(Introref);
   return (
@@ -26,28 +27,34 @@ const WorkExperience = ({ element }) => {
         </h1>
       </motion.div>
       <VerticalTimeline>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "#003153", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #003153" }}
-          date={element.date}
-          iconStyle={{ background: "#006dba", color: "#fff" }}
-          icon={<img src={element.image} className="rounded-full h-full" />}
-        >
-          <h3 className="vertical-timeline-element-title">{element.role}</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            {element.place}
-          </h4>
-          <p>
-            {element.service}
-            <p>
-              Link:
-              <a href={element.link} className="font-bold" target="_blank">
-                Take me to a {element.name} site
-              </a>
-            </p>
-          </p>
-        </VerticalTimelineElement>
+        {work_experience.map((element) => {
+          return (
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: "#003153", color: "#fff" }}
+              contentArrowStyle={{ borderRight: "7px solid  #003153" }}
+              date={element.date}
+              iconStyle={{ background: "#006dba", color: "#fff" }}
+              icon={<img src={element.image} className="rounded-full h-full" />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                {element.role}
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                {element.place}
+              </h4>
+              <p>
+                {element.service}
+                <p>
+                  Link:
+                  <a href={element.link} className="font-light" target="_blank">
+                    Take me to a {element.name} site
+                  </a>
+                </p>
+              </p>
+            </VerticalTimelineElement>
+          );
+        })}
       </VerticalTimeline>
     </>
   );

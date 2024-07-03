@@ -22,7 +22,8 @@ import GithubLogo from './GitHub_logo.png'
 import DeployLogo from './Deploy_logo.png'
 
 //Skills
-import wixLogo from './WorkExp/wixLogo.png'
+import Plancab from './plancab.jpeg'
+import Gssoc from './GSSOC.png'
 import androiddev_logo from './Skills/AndroidDev_logo.png'
 import backenddev_logo from './Skills/backendDevLogo.png'
 import designer_logo from './Skills/Designer_logo.png'
@@ -76,24 +77,32 @@ const ProjectsPhoto = [{
     name: "ChatApp",
     img: ChatApp,
     url: 'https://github.com/AbhayKrSing/Project/tree/master/ChatApp',
-    about: "This is one of the project in which i learned a lot. Talktive is basically a full stack ChatApp. Technology used is MERN and websocket.",
-    deploy: ''
+    about: "Developed using React, MongoDB, Node.js, Express, and WebSockets.Enables one-on-one chat interactions.Facilitates group chats for collaborative communication.Provides admin controls for efficient management.",
+    deploy: 'https://talktive.netlify.app/'
 }, {
     name: 'iNoteLamp',
     img: Dashboard,
     url: 'https://github.com/AbhayKrSing/inotelamp',
-    about: "This is one of the project in which i learned lot. inotelamp is basically a full stack notetaking app. In this I done everything on my own.Technology used is MERN.",
-    deploy: ''
+    about: "Developed using React, MongoDB, Node.js, and Express.Features robust authentication and seamless note- taking capabilities.",
+    deploy: 'https://inotelamp.netlify.app'
 }]
 
 const work_experience = [{
     name: 'plancab',
-    date: '2023',
-    role: 'Developer',
-    place: 'Noida,India',
-    service: 'Provides Full stack App to a startup PlanCab startup at bangalore.',
+    date: 'Sept 2023-Oct 2023',
+    role: 'Front-end Developer',
+    place: 'Remote',
+    service: 'I have worked as a Front-end Developer here, during which I learned a lot about various technologies.I got this opportunity through freelancing.',
     link: "https://www.plancab.in/",
-    image: wixLogo
+    image: "https://static.wixstatic.com/media/ffe4f9_a94db269b1db42ca96d2f0340aca1bd2~mv2.png/v1/fill/w_190,h_135,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/plancab-removebg-preview.png" || Plancab
+}, {
+    name: 'GSSOC',
+    date: 'May 2023 to July 2023',
+    role: 'Contributer',
+    place: 'Remote',
+    service: 'I participated in GSSOC as a contributor and worked on various full-stack projects. Observing and learning from others has helped me understand problem-solving techniques and best industry practices.',
+    link: "https://gssoc.girlscript.tech/",
+    image: Gssoc
 }]
 
 export { logo, TechStack, ProjectsPhoto, GithubLogo, work_experience, DeployLogo, Skills }
